@@ -257,7 +257,7 @@ describe 'collections:', :model_spec, :collection_spec do
         subject.update_or_add('truffula', test_attrs).should == updated_item
         subject.update_or_add('truffula', test_item ).should == test_item
       end
-      it 'FIXME: does not behave right on existing bojects' do
+      it "returns item" do
         updated_item = test_item.dup ; updated_item.name = 'truffula'
         subject.update_or_add('truffula', test_item ).should == updated_item
       end

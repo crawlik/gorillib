@@ -3,7 +3,9 @@ require 'rspec/autorun'
 
 if ENV['GORILLIB_COV']
   require 'simplecov'
-  SimpleCov.start
+  SimpleCov.start do
+    add_filter "/spec/"
+  end
 end
 
 GORILLIB_ROOT_DIR = File.expand_path(File.join(File.dirname(__FILE__),'..'))
